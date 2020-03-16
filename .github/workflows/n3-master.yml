@@ -5,14 +5,14 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
-name: X64-Master
+name: n3-master
 
 on:
-  schedule:
-    - cron: 0 20 * * *
-#  push:
-#    branches: 
-#      - master
+#  schedule:
+#    - cron: 0 20 * * *
+  push:
+    branches: 
+      - master
 
 jobs:
   build:
@@ -46,7 +46,7 @@ jobs:
       run: |
           cd openwrt
           rm -f .config
-          cp ../x64-master .config
+          cp ../n3-master .config
           
     - name: Make Defconfig
       run: |
