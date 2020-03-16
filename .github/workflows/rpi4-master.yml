@@ -13,6 +13,8 @@ on:
   push:
     branches: 
       - master
+    paths:
+      - 'rpi4-master'
 
 jobs:
   build:

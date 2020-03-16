@@ -5,7 +5,7 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #=================================================
-name: rpi4-lean-master
+name: X64-1907
 
 on:
 #  schedule:
@@ -13,6 +13,8 @@ on:
   push:
     branches: 
       - master
+    paths:
+      - 'x86-1907'
 
 jobs:
   build:
@@ -34,7 +36,7 @@ jobs:
     - name: Clone source code
       env: 
         REPO_URL: https://github.com/Lienol/openwrt
-        REPO_BRANCH: dev-lean-lede
+        REPO_BRANCH: dev-19.07
       run: git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
     - name: Update feeds
       run: cd openwrt && ./scripts/feeds update -a
@@ -46,7 +48,7 @@ jobs:
       run: |
           cd openwrt
           rm -f .config
-          cp ../rpi4-lean-master .config
+          cp ../x64-1907 .config
           
     - name: Make Defconfig
       run: |

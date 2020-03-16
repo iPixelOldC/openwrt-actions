@@ -13,6 +13,8 @@ on:
   push:
     branches: 
       - master
+    paths:
+      - 'n3-master'
 
 jobs:
   build:
