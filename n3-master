@@ -414,3 +414,4 @@ CONFIG_first_card_wds_ifname="wds"
 # CONFIG_TARGET_ramips_mt7620_DEVICE_zyxel_keenetic-omni-ii is not set
 # CONFIG_TARGET_ramips_mt7620_DEVICE_zyxel_keenetic-viva is not set
 # CONFIG_TARGET_ramips_mt7620_Default is not set
+
